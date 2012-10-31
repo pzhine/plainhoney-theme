@@ -17,13 +17,13 @@
 
 @font-face {
   font-family: 'Lora';
-  src: url('../fonts/Lora-Light.ttf');
+  src: url('../fonts/Lora-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Lora';
   font-weight: bold;
-  src: url('../fonts/Lora-Regular.ttf');
+  src: url('../fonts/Lora-Bold.ttf');
 }
 
 @font-face {
