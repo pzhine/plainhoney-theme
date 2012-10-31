@@ -41,7 +41,8 @@
 			'css/hivenav.css',
 			'css/comb.css',
 			'css/article.css',
-      'css/comments.css'
+      'css/comments.css',
+      'css/footer.css'
 		  )
 		), get_bloginfo('template_directory').'/');  ?>
 	</head>

@@ -17,16 +17,13 @@
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'twentyeleven' ) ); ?></div>
 		</nav>
 		<?php endif; ?>
-
-	<?php
-		/* If there are no comments and comments are closed, let's leave a little note, shall we?
-		 * But we don't want the note on pages or post types that do not support comments.
-		 */
-		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'plainhoney' ); ?></p>
 	<?php endif; ?>
-
+  
+  <?php if( ! comments_open() ) : ?>
+    <div class="comments-closed">
+      Commenting is closed for now
+    </div>
+  <?php else: ?>
 	<?php 
     $fields = array(
         'author' => 
@@ -37,12 +34,13 @@
     $args = array(
       'fields' => $fields,
       'comment_field' =>
-        '<li class="comment-form-comment"><label for="comment">Comment</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></li>',
+        '<li class="comment-form-comment"><label for="comment">comment</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></li>',
       'title_reply' => '<div class="add-comment">Add a comment</div>',
       'comment_notes_before' => '<ul>',
       'comment_notes_after' => '</ul>'
     );
     comment_form($args); 
   ?>
+  <?php endif; ?>
 
 </div><!-- #comments -->

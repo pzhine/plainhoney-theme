@@ -1,0 +1,15 @@
+.footer {
+  border-top: 1px solid #ccc;
+  margin: 27px 0 0 260px;
+  width: 500px;
+  padding: 20px 0 0 0;
+  color: #666;
+  position: relative;
+  height: 75px;
+  overflow: hidden;
+}
+  .footer .footercombs {
+    position: absolute;
+    top: 55px;
+    left: 190px;
+  }

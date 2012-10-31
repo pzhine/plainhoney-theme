@@ -4,7 +4,6 @@ body {
   font-size: 14px;
   line-height: 23px;
   background-color: #fff;
-  padding-bottom: 100px;
 }
 
 a {
@@ -22,9 +21,9 @@ em {
 	position: relative;
 }
 	.wrapper .content {
-		position: absolute;
-		left: 260px;
-		top: 26px;
+		position: relative;
+		margin-left: 260px;
+		margin-top: 26px;
 		z-index: 500;
 	}
 	

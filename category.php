@@ -42,7 +42,8 @@
 			'//css/rightcombs.css',
 			'//css/hivenav.css',
 			'//css/excerptlist.css',
-			'//css/comb.css'
+			'//css/comb.css',
+			'//css/footer.css'
 		  )
 		), get_bloginfo('template_directory').'/');  ?>
 		
