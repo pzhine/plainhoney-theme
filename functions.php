@@ -18,4 +18,15 @@ function plainhoney_remove_images( $content ) {
    return $content;
 }
 
+function plainhoney_page_nav() {
+	global $wp_query;
+
+	if ( $wp_query->max_num_pages > 1 ) : ?>
+		<div class="pagenav">
+			<div class="nextpage"><?php next_posts_link( 'Older pollen &raquo;' ); ?></div>
+			<div class="prevpage"><?php previous_posts_link( '&laquo; Newer pollen' ); ?></div>
+		</div>
+	<?php endif;
+}
+
 ?>

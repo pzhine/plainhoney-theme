@@ -41,6 +41,7 @@ add_filter( 'the_content', 'plainhoney_remove_images', 100 );
 		</li>
 		<?php endwhile; ?>
 	</ul>
+  <?php plainhoney_page_nav(); ?>
 <?php else : //have_posts ?>
 	No pollen yet :(
 <?php endif; //have_posts  ?>
