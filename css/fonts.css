@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Neuton';
+  src: url('../fonts/Neuton-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Neuton';
+  font-weight: bold;
+  src: url('../fonts/Neuton-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Neuton';
+  font-style: italic;
+  src: url('../fonts/Neuton-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: bold;
+  src: url('../fonts/Lora-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  src: url('../fonts/Lora-Italic.ttf');
+}

@@ -1,0 +1,63 @@
+.leftcol {
+	position: absolute;
+	left: 43px;
+	top: 242px;
+}
+	.leftcol h1 {
+		font-family: 'Neuton', serif;
+		font-weight: bold;
+		font-size: 22px;
+		width: 140px;
+		color: #595959;
+		line-height: 27px;
+	}
+	
+	.leftcol .thickline {
+		position: relative;
+		left: -10px;
+		width: 157px;
+		height: 1px;
+		border-bottom: 2px solid #999;
+		margin: 15px 0;
+	}
+	
+	.leftcol .thinline {
+		position: relative;
+		left: -10px;
+		width: 157px;
+		height: 1px;
+		border-bottom: 1px solid #666;
+		margin: 15px 0;
+	}
+	
+	.leftcol .parentcat {
+		position: relative;
+		left: -4px;
+		color: #9B8579;
+		margin-bottom: 8px;
+		text-decoration: none;
+		display: block;
+	}
+	.leftcol .parentcat:hover {
+		text-decoration: underline;
+	}
+	
+	.leftcol ul {
+	
+	}
+		.leftcol li {
+			line-height: 24px;
+			padding: 0 3px;
+			margin-bottom: 6px;
+		}
+		.leftcol li.active {
+			padding: 0;
+		}
+			.leftcol li.active span,
+			.leftcol li.active a
+			{
+				background-color: #C2B59B;
+				color: #fff;
+				padding: 0 5px 0 3px;
+				text-decoration: none;
+			}

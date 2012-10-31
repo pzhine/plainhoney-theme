@@ -1,0 +1,29 @@
+body {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 23px;
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+
+a {
+  color: #003E65;
+  text-decoration: underline;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+	.wrapper .content {
+		position: absolute;
+		left: 260px;
+		top: 26px;
+		z-index: 500;
+	}
+	
+	.wrapper .content.nocategories {
+		padding-top: 145px;
+	}
+		

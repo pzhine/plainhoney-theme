@@ -1,0 +1,20 @@
+.comb {
+	background: transparent url(../images/hex-nolink.png) no-repeat scroll 0 0;
+	width: 132px;
+	height: 85px;
+	position: absolute;
+	text-align: center;
+	padding-top: 58px;
+}
+.comb.hidden {
+	background-image: none;
+}
+.comb.linked {
+	background-image: url(../images/hex-link.png);
+	cursor: pointer;
+}
+	.comb.linked a {
+		text-decoration: none;
+		color: #000;
+	}
+	

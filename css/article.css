@@ -1,0 +1,38 @@
+.article {
+	width: 470px;
+	position: absolute;
+	top: 145px;
+}
+	.article h1 {
+		font-family: 'Neuton', serif;
+		font-weight: bold;
+		font-size: 22px;
+		margin-bottom: 7px;
+		width: 300px;
+	}
+	.article h2 {
+		font-family: 'Neuton', serif;
+		font-weight: bold;
+		font-size: 16px;
+		margin-bottom: 7px;
+	}
+	.article p {
+		margin-bottom: 20px;
+	}
+	
+	.article .media {
+		-webkit-box-shadow: 0px 0px 4px 0px #aaa;
+        box-shadow: 0px 0px 4px 0px #aaa;
+		padding: 4px;
+		margin: 14px 0 11px -5px;
+		width: 480px;
+	}
+		.article .media a{
+			display: block;
+			overflow: hidden;
+			line-height: 0;
+		}
+		.article .media img {
+			width: 480px;
+			position: relative;
+		}
