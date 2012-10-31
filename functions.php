@@ -29,4 +29,21 @@ function plainhoney_page_nav() {
 	<?php endif;
 }
 
+function plainhoney_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+  include 'views/comment.php';
+}
+
+function plainhoney_endsign( $content ) {
+  return preg_replace('/(.*)\s*<\/p>/s','$1<span class="endsign"></span></p>', $content);
+  $cutat = strrpos($content, '</p>');
+  if( $cutat === FALSE ) {
+    $cutat = strrpos($content, '.</P>');
+  }
+  if( $cutat !== FALSE ) {
+    $content = substr($content, 0, $cutat) . '<span class="endsign"></span></p>';
+  }
+  return $content;
+}
+
 ?>

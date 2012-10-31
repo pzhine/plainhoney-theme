@@ -9,7 +9,7 @@
 		float: left;
 		margin-left: 7px;
 		padding-left: 10px;
-		background: transparent url(../images/sprites.png) no-repeat scroll 0 6px;
+		background: transparent url(../images/sprites.png) no-repeat scroll 0 -144px;
 	}
 	.breadcrumbs li:first-child {
 		background: none;

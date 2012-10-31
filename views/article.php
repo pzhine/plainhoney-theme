@@ -9,5 +9,8 @@
 		pollinated under
 		<?php the_category(', ') ?>
 	</h2>
+  <?php add_filter( 'the_content', 'plainhoney_endsign', 100 ); ?>
 	<?php the_content() ?>
+  
+  <?php comments_template( '/views/comments.php', false ); ?>
 </div>

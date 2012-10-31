@@ -40,7 +40,8 @@
 			'css/rightcombs.css',
 			'css/hivenav.css',
 			'css/comb.css',
-			'css/article.css'
+			'css/article.css',
+      'css/comments.css'
 		  )
 		), get_bloginfo('template_directory').'/');  ?>
 	</head>

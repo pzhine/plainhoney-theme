@@ -1,0 +1,66 @@
+.comments {
+  
+}
+
+  .comments h5 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Neuton, serif;
+    color: #888;
+  }
+
+  .comments .commentlist {
+    margin-top: 20px;
+  }
+
+    .comments .comment {
+      margin: 0 0 20px 0;
+    }
+      .comments .comment-meta {
+        margin-bottom: 2px;
+      }
+        .comments .comment-author {
+          font-weight: bold;
+        }
+        .comments .comment-date {
+          color: #999;
+          margin-left: 2px;
+        }
+    
+    .comments .comment p {
+      margin: 0 0 5px 0;
+      line-height: 20px;
+      color: #454545;
+    }
+
+  .comments .add-comment {
+    font-family: Neuton, serif;
+    border-top: 1px dotted #ccc;
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0 10px 0;
+    padding: 20px 0 0 0;
+    width: 370px;
+  }
+
+  .comments form li {
+    margin: 0 0 12px 0;
+    
+  }
+    .comments form label {
+      display: block;
+      color: #666;
+      font-size: 12px;
+    }
+    .comments form input {
+      display: block;
+      height: 25px;
+      color: #454545;
+      font-size: 13px;
+    }
+    .comments textarea {
+      color: #454545;
+      font-size: 13px;
+    }
+ 
+    
