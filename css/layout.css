@@ -1,5 +1,6 @@
 body {
   font-family: Lora, serif;
+  color: #333;
   font-size: 14px;
   line-height: 23px;
   background-color: #fff;
@@ -9,6 +10,10 @@ body {
 a {
   color: #003E65;
   text-decoration: underline;
+}
+
+em {
+  font-style: italic;
 }
 
 .wrapper {
