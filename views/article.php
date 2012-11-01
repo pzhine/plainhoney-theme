@@ -1,4 +1,4 @@
-<div class="article">
+<div class="article <?php echo ($is_singleton ? 'withcategories' : '') ?>">
 	<h1><?php the_title() ?></h3>
 	<h2>
 		<!-- by <a href="/<?php the_author_meta('user_login') ?>">

@@ -12,7 +12,7 @@
 	?>
 	<tr>
 	
-		<?php for( $i = 0; $i < 3; $i++ ) {	
+		<?php for( $i = 0; $i < count($categories) && $i < 3; $i++ ) {	
 			$category = $categories[$i]; 
 		?>
 		<td>

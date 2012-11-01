@@ -1,3 +1,14 @@
+<?php
+  $category = get_category( $wp_query->query_vars['cat'] );
+  $categories = get_categories(array('parent'=>$category->cat_ID, 'hide_empty'=>0));
+  
+  if( count($posts) > 0 ) {
+    $is_singleton = get_post_meta($posts[0]->ID, 'plainhoney_is_singleton', true);
+    if( $is_singleton && count($categories)==0 ) {
+      header('Location: '.get_permalink($posts[0]->ID));
+    }
+  }
+?>
 <!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
@@ -50,12 +61,8 @@
 	</head>
 	<body class="category">
 		<div class="wrapper">
-			<?php $category = get_category( $wp_query->query_vars['cat'] ); ?>
-		
 			<?php include('views/header.php'); ?>
 			<?php include('views/category-leftcol.php'); ?>
-			
-			<?php $categories = get_categories(array('parent'=>$category->cat_ID, 'hide_empty'=>0)); ?>
 			
 			<div class="content <?php echo (count($categories) == 0)?'nocategories':'' ?>">
 				

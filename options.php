@@ -49,4 +49,42 @@ function plainhoney_options_validate($input) {
 function plainhoney_section_text() {
 	echo '';
 }
+
+/*
+* POST CUSTOM FIELDS
+*/
+
+add_action( 'add_meta_boxes', 'plainhoney_add_meta_box' );
+add_action( 'save_post', 'plainhoney_save_postdata' );
+
+function plainhoney_add_meta_box() {
+  add_meta_box( 
+    'plainhoney_metabox', 
+    'Plain Honey', 
+    'plainhoney_metabox_render',
+    'post'
+  ); 
+}
+
+function plainhoney_metabox_render($post) {
+  wp_nonce_field( plugin_basename( __FILE__ ), 'plainhoney_noncename' );
+  $checked = (get_post_meta( $post->ID, 'plainhoney_is_singleton', true )=='1');
+?>
+  <label for="plainhoney_is_singleton">Only post in category?</label>
+  <input type="checkbox" name="plainhoney_is_singleton" id="plainhoney_is_singleton" value="1" <?php echo ($checked ? 'checked' : '')?> />
+<?php
+}
+  
+function plainhoney_save_postdata($post_id) {
+  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+      return;
+  if ( !wp_verify_nonce( $_POST['plainhoney_noncename'], plugin_basename( __FILE__ ) ) )
+      return;
+  if ( !current_user_can( 'edit_post', $post_id ) )
+        return;
+        
+  if( isset( $_POST['plainhoney_is_singleton'] ) ){
+      update_post_meta( $post_id, 'plainhoney_is_singleton', esc_attr( $_POST['plainhoney_is_singleton'] ) );
+  }
+}
 ?>

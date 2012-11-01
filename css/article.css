@@ -3,6 +3,9 @@
 	position: relative;
 	padding-top: 145px;
 }
+.article.withcategories {
+  padding-top: 0px;
+}
 	.article h1 {
 		font-family: 'Neuton', serif;
 		font-weight: bold;
