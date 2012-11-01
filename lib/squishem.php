@@ -21,18 +21,17 @@ function squishem($resources, $basedir='', $debug=true) {
     }
     
   } else {
-	/*
-	$basedir = str_replace(get_bloginfo('url'), '', $basedir);
-	foreach( $resources['js'] as $key=>$val ) {
-		$resources['js'][$key] = $basedir.$val;
-	}
-	foreach( $resources['css'] as $key=>$val ) {
-		$resources['css'][$key] = $basedir.$val;
-	}
-	*/
+    $base = preg_replace('/http:\/\/[^\/]+\//','',$basedir);
+    $base = preg_replace('/(.*)\//','$1',$base);
+    foreach( $resources['css'] as $key=>$val ) {
+      $css[] = str_replace('css/','', str_replace('.css','',$val));
+    }
+    foreach( $resources['js'] as $key=>$val ) {
+      $js[] = str_replace('js/','', str_replace('.js','',$val));
+    }
     ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo $basedir ?>min/?f=<?php echo implode($resources['css'],',')?>">
-    <script type="text/javascript" src="<?php echo $basedir ?>min/?f=<?php echo implode($resources['js'],',')?>"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $basedir ?>min/?t=css&f=<?php echo implode($css,',')?>&b=<?php echo $base; ?>">
+    <script type="text/javascript" src="<?php echo $basedir ?>min/?t=js&f=<?php echo implode($js,',')?>&b=<?php echo $base; ?>"></script>
     <?php
   }
 }

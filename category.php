@@ -36,25 +36,25 @@
 		
 		<?php squishem(array(
 		  'js' => array(
-			'//js/jquery.js', 
-			'//js/jquery.widgets.js', 
-			'//js/HexLayout.js',
-			'//js/combs.js'
+			'js/jquery.js', 
+			'js/jquery.widgets.js', 
+			'js/HexLayout.js',
+			'js/combs.js'
 		  ),      
 		  'css' => array(
-			'//css/reset.css', 
-			'//css/fonts.css', 
-			'//css/layout.css', 
-			'//css/category.css', 
-			'//css/header.css',
-			'//css/breadcrumbs.css',
-			'//css/leftcol.css',
-			'//css/leftcombs.css',
-			'//css/rightcombs.css',
-			'//css/hivenav.css',
-			'//css/excerptlist.css',
-			'//css/comb.css',
-			'//css/footer.css'
+			'css/reset.css', 
+			'css/fonts.css', 
+			'css/layout.css', 
+			'css/category.css', 
+			'css/header.css',
+			'css/breadcrumbs.css',
+			'css/leftcol.css',
+			'css/leftcombs.css',
+			'css/rightcombs.css',
+			'css/hivenav.css',
+			'css/excerptlist.css',
+			'css/comb.css',
+			'css/footer.css'
 		  )
 		), get_bloginfo('template_directory').'/');  ?>
 		

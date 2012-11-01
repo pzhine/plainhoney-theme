@@ -23,6 +23,7 @@ Minify::setCache(
     ,$min_cacheFileLocking
 );
 
+$min_documentRoot = false;
 if ($min_documentRoot) {
     $_SERVER['DOCUMENT_ROOT'] = $min_documentRoot;
 } elseif (0 === stripos(PHP_OS, 'win')) {
@@ -55,6 +56,13 @@ if (isset($_GET['g'])) {
 }
 if (isset($_GET['f']) || isset($_GET['g'])) {
     // serve!   
+    $files2 = array();
+    $files = explode(',',$_GET['f']);
+    $type = $_GET['t'];
+    foreach( $files as $file ) {
+      $files2[] = $type.'/'.$file.'.'.$type;
+    }
+    $_GET['f'] = implode(',',$files2);
     Minify::serve('MinApp', $min_serveOptions);
         
 } elseif ($min_enableBuilder) {

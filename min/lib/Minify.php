@@ -272,6 +272,7 @@ class Minify {
                 : $cacheId;
             // check cache for valid entry
             $cacheIsReady = self::$_cache->isValid($fullCacheId, self::$_options['lastModifiedTime']); 
+           
             if ($cacheIsReady) {
                 $cacheContentLength = self::$_cache->getSize($fullCacheId);    
             } else {
