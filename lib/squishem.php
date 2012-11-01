@@ -1,6 +1,6 @@
 <?php
 
-function squishem($resources, $basedir='', $debug=true) {
+function squishem($resources, $basedir='', $debug=false) {
   if( (strpos($_SERVER['REMOTE_HOST'], 'local') !== FALSE 
   || $_SERVER['REMOTE_HOST'] == '127.0.0.1'
   || $_GET['debug'] !== NULL 
