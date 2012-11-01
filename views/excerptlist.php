@@ -2,11 +2,6 @@
 add_filter( 'the_content', 'plainhoney_remove_images', 100 );
 ?>
 <?php if ( have_posts() ) : ?>
-<?php 
-	if( count($posts)==1 ) { 
-		global $more;
-		$more = 1;
-	} ?>
 	<ul class="excerptlist">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<li>
