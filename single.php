@@ -38,7 +38,6 @@
 			'css/leftcol.css',
 			'css/leftcombs.css',
 			'css/rightcombs.css',
-			'css/hivenav.css',
 			'css/comb.css',
 			'css/article.css',
       'css/comments.css',
@@ -65,22 +64,14 @@
         <?php 
           if( $is_singleton == '1' ) {
             $categories = get_categories(array('parent'=>$category->category_parent, 'hide_empty'=>0));
-            if( count($categories) > 0 ) {
-              include('views/category-hivenav.php');
-            }
           }
         ?>
 				
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php include('views/article.php'); ?>
 				<?php endwhile; ?>
-				<?php if( $is_singleton ) { 
-          include('views/category-rightcombs.php'); 
-        } ?>
 			</div>
-			<?php if( !$is_singleton ) { 
-        include('views/post-rightcombs.php'); 
-      } ?>
+			<?php include('views/post-rightcombs.php'); ?>
 			<?php //get_sidebar(); ?>
 			<?php get_footer(); ?>
 		</div>

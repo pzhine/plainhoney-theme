@@ -3,7 +3,9 @@ add_filter( 'the_content', 'plainhoney_remove_images', 100 );
 ?>
 <?php if ( have_posts() ) : ?>
 	<ul class="excerptlist">
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post();
+      $is_singleton = get_post_meta(get_the_ID(), 'plainhoney_is_singleton', true);
+      if( $is_singleton && $wp_query->query_vars['cat'] > 0 ) { continue; } ?>
 		<li>
 			<h3>
 				<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
@@ -15,7 +17,17 @@ add_filter( 'the_content', 'plainhoney_remove_images', 100 );
 				by <?php the_author_meta('display_name') ?>
 				|
 				pollinated under
-				<?php the_category(', ') ?>
+				<?php
+        if( $is_singleton ) {
+          $postcats = get_the_category();
+          $parent = get_category($postcats[0]->category_parent);
+        ?>
+        <a href="/hive/<?php echo $parent->slug ?>"><?php echo $parent->name ?></a>
+        <?php
+        } else {
+          the_category(', ');
+        }
+        ?>
 			</h4>
 			<div class="excerpt">
 				<?php 

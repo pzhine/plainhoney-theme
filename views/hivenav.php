@@ -12,7 +12,7 @@
 			$category = $categories[$i]; 
 		?>
 		<td>
-			<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+			<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 		</td>
 		<?php } ?>
 		<td></td>
@@ -26,7 +26,7 @@
 				$category = $categories[$i]; 
 			?>
 				<td>
-					<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+					<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 				</td>
 			<?php } ?>
 			<?php for( $f = $i; $f <= 5; $f++ ) { ?>
@@ -47,7 +47,7 @@
 				$category = $categories[$i]; 
 			?>
 				<td>
-					<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+					<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 				</td>
 			<?php } ?>
 			
@@ -61,7 +61,7 @@
 				$category = $categories[$i]; 
 			?>
 				<td>
-					<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+					<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 				</td>
 			<?php } ?>
 		<?php } else { ?>
@@ -80,7 +80,7 @@
 				$category = $categories[$i]; 
 			?>
 				<td>
-					<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+					<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 				</td>
 			<?php } ?>
 		</tr>
@@ -92,7 +92,7 @@
 				$category = $categories[$i]; 
 			?>
 				<td>
-					<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+					<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 				</td>
 			<?php } ?>
 		</tr>
@@ -120,7 +120,7 @@ $(function() {
 					$category = $categories[$i]; 
 				?>
 					<td>
-						<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+						<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 					</td>
 				<?php } ?>
 			</tr>

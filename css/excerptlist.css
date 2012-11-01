@@ -2,6 +2,7 @@
 	width: 470px;
 	position: relative;
 	z-index: 500;
+  min-height: 150px;
 }
 .home .excerptlist {
 	width: 375px;

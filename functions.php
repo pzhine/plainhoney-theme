@@ -46,4 +46,11 @@ function plainhoney_endsign( $content ) {
   return $content;
 }
 
+function _hive($category) {
+  if( strlen($category->description) > 0 ) {
+    return nl2br($category->description);
+  }
+  return $category->name;
+}
+
 ?>

@@ -16,7 +16,7 @@
 			$category = $categories[$i]; 
 		?>
 		<td>
-			<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+			<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 		</td>
 		<?php } ?>
 		<?php for( $f = $i; $f <= 3; $f++ ) { ?>
@@ -33,7 +33,7 @@
 				$category = $categories[$i]; 
 			?>
 				<td>
-					<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+					<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 				</td>
 			<?php } ?>
 			<?php for( $f = $i; $f < 7; $f++ ) { ?>
@@ -48,7 +48,7 @@
 			$category = $categories[$i]; 
 		?>
 			<td>
-				<a href="/hive/<?php echo $category->slug ?>"><?php echo $category->name?></a>
+				<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
 			</td>
 		<?php } else if( $rowcount<=2 ) { ?>
 			<td></td>
