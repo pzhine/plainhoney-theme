@@ -74,7 +74,9 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php include('views/article.php'); ?>
 				<?php endwhile; ?>
-				
+				<?php if( $is_singleton ) { 
+          include('views/category-rightcombs.php'); 
+        } ?>
 			</div>
 			<?php if( !$is_singleton ) { 
         include('views/post-rightcombs.php'); 
