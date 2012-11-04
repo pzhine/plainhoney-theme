@@ -10,16 +10,19 @@
 		font-family: 'Neuton', serif;
 		font-weight: bold;
 		font-size: 22px;
-		margin-bottom: 7px;
+		margin-bottom: 3px;
 		width: 300px;
     color: #454545;
 	}
 	.article h2 {
 		font-family: 'Neuton', serif;
-		font-weight: bold;
 		font-size: 16px;
-		margin-bottom: 15px;
+		margin-bottom: 19px;
+    color: #888;
 	}
+    .article .category {
+      color: #888;
+    }
 	.article p {
 		margin-bottom: 20px;
 	}

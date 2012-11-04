@@ -15,18 +15,32 @@ add_filter( 'the_content', 'plainhoney_remove_images', 100 );
 					<?php the_author_meta('display_name') ?>
 				</a> -->
 				by <?php the_author_meta('display_name') ?>
+        <?php if ($wp_query->query_vars['cat'] == 0) : ?>
 				|
 				pollinated under
 				<?php
+        $postcats = get_the_category();
         if( $is_singleton ) {
-          $postcats = get_the_category();
           $parent = get_category($postcats[0]->category_parent);
         ?>
-        <a href="/hive/<?php echo $parent->slug ?>"><?php echo $parent->name ?></a>
+        <a class="category" href="/hive/<?php echo $parent->slug ?>"><?php echo strtolower($parent->name) ?></a>
         <?php
         } else {
-          the_category(', ');
+          for( $i=0; $i < count($postcats); $i++ ) {
+            $cat = $postcats[$i];
+            $d = ', ';
+            if( $i == count($postcats) - 1 ) {
+              $d = '';
+            }
+            if( $i == count($postcats) - 2 ) {
+              $d = ' & ';
+            }
+          ?>
+          <a class="category" href="/hive/<?php echo $cat->slug ?>"><?php echo strtolower($cat->name) ?></a><?php echo $d ?>
+          <?php
+          }
         }
+        endif;
         ?>
 			</h4>
 			<div class="excerpt">
