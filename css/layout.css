@@ -30,4 +30,21 @@ em {
 	.wrapper .content.nocategories {
 		padding-top: 145px;
 	}
-		
+
+#infscr-loading {
+    height: 70px;
+    position: absolute;
+    background-color: #fff;
+    width: 600px;
+}
+#infscr-loading img {
+    float: left;
+    width: 65px;
+}
+#infscr-loading p {
+    float: left;
+    padding-top: 23px
+}
+#infscr-loading div {
+    float: left;
+}

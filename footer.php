@@ -1,3 +1,4 @@
+<div style="clear:both"></div>
 <div class="footer">
 Words and images by Plain Honey, circa 2012.
 </div>
