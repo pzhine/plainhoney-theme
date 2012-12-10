@@ -11,7 +11,7 @@
             ?>
         <p>
             <strong><?php echo $user->display_name ?></strong>
-            <?php echo $description; ?>
+            <?php echo nl2br($description); ?>
         </p>
     <?php endforeach; ?>
     

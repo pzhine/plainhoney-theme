@@ -11,7 +11,7 @@
             $description = strstr($category->description, ' '); ?>
         <p>
             <a class="comb-link" href="/combs/<?php echo $category->slug ?>"><?php echo strtoupper($firstWord) ?></a>
-            <?php echo $description; ?>
+            <?php echo nl2br($description); ?>
         </p>
     <?php endforeach; ?>
     

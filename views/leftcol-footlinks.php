@@ -6,6 +6,6 @@
         <a href="/pollinators">Pollinators</a>
     </li>
 	<li>
-        <a href="mailto:beefriendly@plainhoney.com">Contact</a>
+        <a href="mailto:<?php echo get_option('admin_email') ?>">Contact</a>
     </li>
 </ul>
