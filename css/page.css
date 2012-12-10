@@ -22,6 +22,11 @@
 		margin-bottom: 20px;
 	}
     
+    .page p br {
+        display: block;
+        margin-bottom: 4px;
+    }
+    
     .page strong {
         font-weight: bold;
     }
