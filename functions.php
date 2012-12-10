@@ -47,8 +47,9 @@ function plainhoney_endsign( $content ) {
 }
 
 function _hive($category) {
-  if( strlen($category->description) > 0 ) {
-    return nl2br($category->description);
+  $formattedName = get_field('formatted_name', 'category_'.$category->cat_ID);
+  if( strlen($formattedName) > 0 ) {
+    return $formattedName;
   }
   return $category->name;
 }

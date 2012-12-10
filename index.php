@@ -18,7 +18,6 @@
 	<meta property="og:title" content="Plain Honey" />
 	<meta property="og:image" content="http://www.plainhoney.com/images/logo.png" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="http://www.plainhoney.com" />
 	<meta property="og:site_name" content="Plain Honey" />
 	<meta property="og:description"
 		  content="Plain honey is a hive of essays, stories, and discussions."/>

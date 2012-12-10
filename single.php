@@ -15,10 +15,17 @@
 	<head>
 		<?php get_header(); ?>
 		
-		<meta property="og:title" content="Plain Honey" />
-		<meta property="og:image" content="http://www.plainhoney.com/images/logo.png" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://www.plainhoney.com" />
+		<meta property="og:title" content="<?php the_title() ?>" />
+        <?php 
+            $images = attachments_get_attachments();
+            if( count($images) > 0 ) :
+                $image = plainhoney_get_smallest_attachment($images);
+        ?>
+            <meta property="og:image" content="<?php echo $image['location'] ?>" />
+        <?php else: ?>
+            <meta property="og:image" content="http://www.plainhoney.com/images/logo.png" />
+        <?php endif; ?>
+		<meta property="og:type" content="article" />
 		<meta property="og:site_name" content="Plain Honey" />
 		<meta property="og:description"
 			  content="Plain honey is a hive of essays, stories, and discussions."/>

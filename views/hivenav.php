@@ -85,20 +85,8 @@
 			<?php } ?>
 		</tr>
 	<?php } ?>
-	<?php if( count($categories) > 12 ) { ?>
-		<tr>
-			<td class="hidden" colspan="4"></td>
-			<?php for( $i; $i < count($categories) && $i < 13; $i++ ) {	
-				$category = $categories[$i]; 
-			?>
-				<td>
-					<a href="/hive/<?php echo $category->slug ?>"><?php echo _hive($category) ?></a>
-				</td>
-			<?php } ?>
-		</tr>
-	<?php } ?>
 	<?php sideblock(2, 1, 5, $categories, $i); ?>
-	<?php sideblock(3, 3, 5, $categories, $i); ?>
+	<?php sideblock(3, 3, 6, $categories, $i+3); ?>
 </table>
 <script type="text/javascript">
 $(function() {
@@ -110,10 +98,10 @@ $(function() {
 
 <?php function sideblock($rows, $blockcount, $colspan, $categories, $i) {
 	$bc = 0;
-	$rc = 1;
-	$run = 1;
 	while( $bc < $blockcount ) {
-		while( $i < count($categories) && $rc < $rows ) { ?>
+        $rc = 1;
+        $run = 1;
+		while( $i < count($categories) && $rc <= $rows ) { ?>
 			<tr>
 				<td class="hidden" colspan="<?php echo $colspan ?>"></td>
 				<?php for( $i, $j=0; $i < count($categories) && $j < $run ; $i++, $j++ ) {	
@@ -129,6 +117,7 @@ $(function() {
 			$run = 2;
 		}
 		$bc++;
+        $colspan++;
 	} ?>
 	
 <?php } ?>

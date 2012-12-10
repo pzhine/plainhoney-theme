@@ -1,14 +1,3 @@
-<?php
-  $category = get_category( $wp_query->query_vars['cat'] );
-  $categories = get_categories(array('parent'=>$category->cat_ID, 'hide_empty'=>0));
-  
-  if( count($posts) > 0 ) {
-    $is_singleton = get_post_meta($posts[0]->ID, 'plainhoney_is_singleton', true);
-    if( $is_singleton && count($categories)==0 ) {
-      header('Location: '.get_permalink($posts[0]->ID));
-    }
-  }
-?>
 <!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
@@ -24,12 +13,23 @@
 <!--<![endif]-->
 
 	<head>
-		<?php get_header(); ?>
+		<?php global $category, $category_title; 
+        get_header(); ?>
+        
+        <?php
+            $categories = get_categories(array('parent'=>$category->cat_ID, 'hide_empty'=>0));
+
+            if( count($posts) > 0 ) {
+                $is_singleton = get_post_meta($posts[0]->ID, 'plainhoney_is_singleton', true);
+                if( $is_singleton && count($categories)==0 ) {
+                  header('Location: '.get_permalink($posts[0]->ID));
+                }
+            }
+        ?>
 		
-		<meta property="og:title" content="Plain Honey" />
+		<meta property="og:title" content="<?php echo $category_title ?>" />
 		<meta property="og:image" content="http://www.plainhoney.com/images/logo.png" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://www.plainhoney.com" />
 		<meta property="og:site_name" content="Plain Honey" />
 		<meta property="og:description"
 			  content="Plain honey is a hive of essays, stories, and discussions."/>

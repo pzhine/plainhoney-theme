@@ -42,6 +42,7 @@
 	.excerptlist .more-link {
 		display: block;
 		margin-top: 5px;
+        color: #454545;
 	}
 	.excerptlist .media {
 		-webkit-box-shadow: 0px 0px 4px 0px #aaa;
