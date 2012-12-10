@@ -1,7 +1,7 @@
 <div class="leftcol">
 	<?php if( $category->parent != 0 ) {
 		$parentcat = get_category($category->parent); ?>
-		<a class="parentcat" href="/hive/<?php echo $parentcat->slug ?>">
+		<a class="parentcat" href="/combs/<?php echo $parentcat->slug ?>">
 			More <?php echo $parentcat->name ?>
 		</a>
 	<?php } ?>
@@ -15,7 +15,7 @@
 			foreach( $subcategories as $subcat ) { ?>
 				<?php if( $category->parent != 0 && $subcat->cat_ID==$category->cat_ID ) { continue; } ?>
 				<li <?php echo ($subcat->cat_ID==$category->cat_ID)?'class="active"':'' ?>>
-					<a href="/hive/<?php echo $subcat->slug ?>">
+					<a href="/combs/<?php echo $subcat->slug ?>">
 						<?php echo $subcat->name ?> 
 					</a>
 				</li>

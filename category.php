@@ -28,8 +28,9 @@
         ?>
 		
 		<meta property="og:title" content="<?php echo $category_title ?>" />
-		<meta property="og:image" content="http://www.plainhoney.com/images/logo.png" />
+		<meta property="og:image" content="<?php echo get_bloginfo('template_directory') ?>/images/logo.png" />
 		<meta property="og:type" content="website" />
+        <meta property="og:url" content="<?php echo site_url('combs/'.$category->slug) ?>" />
 		<meta property="og:site_name" content="Plain Honey" />
 		<meta property="og:description"
 			  content="Plain honey is a hive of essays, stories, and discussions."/>

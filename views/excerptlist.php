@@ -23,7 +23,7 @@ add_filter( 'the_content', 'plainhoney_remove_images', 100 );
         if( $is_singleton ) {
           $parent = get_category($postcats[0]->category_parent);
         ?>
-        <a class="category" href="/hive/<?php echo $parent->slug ?>"><?php echo strtolower($parent->name) ?></a>
+        <a class="category" href="/combs/<?php echo $parent->slug ?>"><?php echo strtolower($parent->name) ?></a>
         <?php
         } else {
           for( $i=0; $i < count($postcats); $i++ ) {
@@ -36,7 +36,7 @@ add_filter( 'the_content', 'plainhoney_remove_images', 100 );
               $d = ' & ';
             }
           ?>
-          <a class="category" href="/hive/<?php echo $cat->slug ?>"><?php echo strtolower($cat->name) ?></a><?php echo $d ?>
+          <a class="category" href="/combs/<?php echo $cat->slug ?>"><?php echo strtolower($cat->name) ?></a><?php echo $d ?>
           <?php
           }
         }

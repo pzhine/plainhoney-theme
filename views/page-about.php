@@ -10,7 +10,7 @@
             $firstWord = strstr($category->description, ' ', true);
             $description = strstr($category->description, ' '); ?>
         <p>
-            <a class="comb-link" href="/hive/<?php echo $category->slug ?>"><?php echo strtoupper($firstWord) ?></a>
+            <a class="comb-link" href="/combs/<?php echo $category->slug ?>"><?php echo strtoupper($firstWord) ?></a>
             <?php echo $description; ?>
         </p>
     <?php endforeach; ?>
