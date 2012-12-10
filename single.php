@@ -23,12 +23,11 @@
         ?>
             <meta property="og:image" content="<?php echo $image['location'] ?>" />
         <?php else: ?>
-            <meta property="og:image" content="http://www.plainhoney.com/images/logo.png" />
+            <meta property="og:image" content="<?php echo get_bloginfo('template_directory') ?>/images/logo.png" />
         <?php endif; ?>
 		<meta property="og:type" content="article" />
+        <meta property="og:url" content="<?php the_permalink() ?>" />
 		<meta property="og:site_name" content="Plain Honey" />
-		<meta property="og:description"
-			  content="Plain honey is a hive of essays, stories, and discussions."/>
 		<?php squishem(array(
 		  'js' => array(
 			'js/jquery.js', 

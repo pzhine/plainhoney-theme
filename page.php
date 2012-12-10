@@ -16,7 +16,8 @@
 		<?php get_header(); ?>
 		
 		<meta property="og:title" content="<?php the_title() ?>" />
-		<meta property="og:image" content="http://www.plainhoney.com/images/logo.png" />
+		<meta property="og:image" content="<?php echo get_bloginfo('template_directory') ?>/images/logo.png" />
+		<meta property="og:url" content="<?php echo site_url(get_query_var('name')) ?>" />
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Plain Honey" />
 		<?php squishem(array(
