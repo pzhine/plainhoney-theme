@@ -14,10 +14,9 @@
     if ( is_home() || is_front_page() ) {
         bloginfo( 'name' );
     } elseif( is_category() ) {
-        $category = get_category( $wp_query->query_vars['cat'] );
         $category_title = $category->name;
         if( $category->parent != 0 ) {
-            $category_title = get_category_parents($category->parent, false, ' > ');
+            $category_title = get_category_parents($category->parent, false, ' > ') . $category->name;
         }
         echo $category_title;
     } else {

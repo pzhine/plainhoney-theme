@@ -1,3 +1,17 @@
+<?php
+    global $category, $category_title; 
+    
+    $category = get_category( $wp_query->query_vars['cat'] );
+    
+    $categories = get_categories(array('parent'=>$category->cat_ID, 'hide_empty'=>0));
+
+    if( count($posts) > 0 ) {
+        $is_singleton = get_post_meta($posts[0]->ID, 'plainhoney_is_singleton', true);
+        if( $is_singleton && count($categories)==0 ) {
+          header('Location: '.get_permalink($posts[0]->ID));
+        }
+    }
+?>
 <!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
@@ -13,21 +27,9 @@
 <!--<![endif]-->
 
 	<head>
-		<?php global $category, $category_title; 
-        get_header(); ?>
+		<?php get_header(); ?>
         
-        <?php
-            $categories = get_categories(array('parent'=>$category->cat_ID, 'hide_empty'=>0));
-
-            if( count($posts) > 0 ) {
-                $is_singleton = get_post_meta($posts[0]->ID, 'plainhoney_is_singleton', true);
-                if( $is_singleton && count($categories)==0 ) {
-                  header('Location: '.get_permalink($posts[0]->ID));
-                }
-            }
-        ?>
-		
-		<meta property="og:title" content="<?php echo $category_title ?>" />
+        <meta property="og:title" content="<?php echo $category_title ?>" />
 		<meta property="og:image" content="<?php echo get_bloginfo('template_directory') ?>/images/logo.png" />
 		<meta property="og:type" content="website" />
         <meta property="og:url" content="<?php echo site_url('combs/'.$category->slug) ?>" />
