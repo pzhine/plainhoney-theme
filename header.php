@@ -4,6 +4,7 @@
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
+<meta name="google-site-verification" content="vfc5MVpxkPHpGqs274XCy6QaElfY9MTcF3ChIzstE8w" />
 
 <title><?php
 	/*
@@ -25,7 +26,7 @@
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
+		echo ' | ' . max($paged, $page);
 
 	?></title>
 	
