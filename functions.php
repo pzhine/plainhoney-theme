@@ -18,6 +18,31 @@ function plainhoney_remove_images( $content ) {
    return $content;
 }
 
+function plainhoney_add_comments_links( $content ) {
+    $hasMore = preg_match('/__MORELINK__/', $content);
+    
+    $more = '<div class="jumplinks">';
+    if( $hasMore ) {
+        $more .= '<a class="more-link" href="'.get_permalink().'">Continue reading...</a>';
+    }
+    
+    $num = get_comments_number();
+    if( $num > 0 ) {
+        if( $hasMore ) {
+            $more .= ' | ';
+        }
+        $more .= '<a class="comments-link" href="'.get_permalink().'#comments">'
+            .$num.' comment';
+        if( $num > 1 ) {
+            $more .= 's';
+        }
+        $more .= '</a>';
+    }
+    $more .= '</div>';
+    
+    return preg_replace('/__MORELINK__/', $more, $content);
+}
+
 function plainhoney_page_nav() {
 	global $wp_query;
 

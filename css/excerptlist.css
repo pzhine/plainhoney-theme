@@ -37,13 +37,16 @@
 		line-height: 20px;
 	}
 	.excerptlist p {
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 	}
 	.excerptlist .more-link {
-		display: block;
-		margin-top: 5px;
         color: #454545;
+        font-size: 13px;
 	}
+    .excerptlist .comments-link {
+        color: #999;
+        font-size: 13px;
+    }
 	.excerptlist .media {
 		-webkit-box-shadow: 0px 0px 4px 0px #aaa;
         box-shadow: 0px 0px 4px 0px #aaa;

@@ -1,7 +1,9 @@
 
 <div class="comments">
 	<?php if ( have_comments() ) : ?>
-
+    
+    <a name="comments"></a>
+    
     <h5>...buzz buzz...</h5>
   
 		<ol class="commentlist">

@@ -1,5 +1,6 @@
 <?php
 add_filter( 'the_content', 'plainhoney_remove_images', 100 );
+add_filter( 'the_content', 'plainhoney_add_comments_links', 100 );
 ?>
 <?php if ( have_posts() ) : ?>
 	<ul class="excerptlist">
@@ -57,7 +58,8 @@ add_filter( 'the_content', 'plainhoney_remove_images', 100 );
 					<div style="clear:both"></div>
 				<?php } ?>
 				
-				<?php the_content('Continue reading...') ?>
+                <?php the_content('__MORELINK__') ?> 
+                
 			</div>
 		</li>
 		<?php endwhile; ?>
