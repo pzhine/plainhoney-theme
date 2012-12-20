@@ -59,7 +59,6 @@ add_filter( 'the_content', 'plainhoney_add_comments_links', 100 );
 				<?php } ?>
 				
                 <?php the_content('__MORELINK__') ?> 
-                
 			</div>
 		</li>
 		<?php endwhile; ?>

@@ -40,7 +40,11 @@ function plainhoney_add_comments_links( $content ) {
     }
     $more .= '</div>';
     
-    return preg_replace('/__MORELINK__/', $more, $content);
+    if( $hasMore ) {
+        return preg_replace('/__MORELINK__/', $more, $content);
+    } else {
+        return $content.$more;
+    }
 }
 
 function plainhoney_page_nav() {
